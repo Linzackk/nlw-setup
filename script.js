@@ -9,11 +9,11 @@ function add() {
   const today = new Date().toLocaleDateString("pt-br").slice(0, -5)
   const dayExists = nlwSetup.dayExists(today)
   if (dayExists) {
-    alert("Dia já Computado")
+    alert("Dia já Computado ❌")
     return
   }
 
-  alert("Adicionado com Sucesso")
+  alert("Adicionado com Sucesso ✅")
   nlwSetup.addDay(today)
 }
 
@@ -25,5 +25,3 @@ const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}
 
 nlwSetup.setData(data)
 nlwSetup.load()
-
-
